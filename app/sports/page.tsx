@@ -4,6 +4,7 @@ import Link from "next/link";
 import { ChevronRight } from "lucide-react";
 import MostRead from "../components/category/MostRead";
 import CategoryClient from "@/app/components/category/categoryClient";
+import { Suspense } from "react";
 
 export default function SportsPage() {
   const breadcrumbTextStyle =
@@ -13,7 +14,6 @@ export default function SportsPage() {
   return (
     <section className="flex flex-col bg-surface">
       <div className="w-full max-w-[1280px] mx-auto px-4 md:px-6 lg:px-10 py-4 md:py-5 flex flex-col gap-[8px] md:gap-4 opacity-100">
-        {/* Breadcrumb */}
         <div className="w-full h-[23px] flex items-center gap-[5px]">
           <Link href="/" className={breadcrumbTextStyle}>
             गृहपृष्ठ
@@ -38,9 +38,10 @@ export default function SportsPage() {
       </div>
 
       <div className="w-full max-w-[1280px] mx-auto px-4 md:px-6 lg:px-10 flex gap-6">
-        {/* Left — News */}
         <div className="flex-1 min-w-0">
-          <CategoryClient category={sportsCategory} showFeatured={false} />
+          <Suspense fallback={null}>
+            <CategoryClient category={sportsCategory} showFeatured={false} />
+          </Suspense>
         </div>
 
         <div className="hidden lg:block w-[300px] flex-shrink-0">

@@ -8,6 +8,7 @@ export default function Page() {
  
   return (
     <div className="bg-[#EDEAE3]">
+      
       <SearchClient allArticle={allArticle} />
     </div>
   );
