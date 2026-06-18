@@ -110,9 +110,9 @@ const newsLinks = footerNewsLinks.map((item) => ({
             <p className={footerSmallText}>
               {lang === "EN" ? "Privacy" : "गोपनीयता"}
             </p>
-            <p className={footerSmallText}>
+            <Link href='/about' className={footerSmallText}>
               {lang === "EN" ? "About US" : "हाम्रो बारेमा"}
-            </p>
+            </Link>
           </div>
         </div>
       </div>
