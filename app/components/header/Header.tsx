@@ -4,9 +4,9 @@ import Ticker from "./Ticker";
 
 
 const Header = () => {
-  return (
-    <header>
-      <main className="pt-[110px]">
+  return(
+   <header>
+      <main className=" pt-[70px] md:pt-[110px]">
         <Navbar />
         <Ticker />
         <Nepse />

@@ -4,7 +4,7 @@ import SideHeroCard from "./SideHeroCard"
 
 const HeroSection = () => {
   return (
-    <section className="w-full bg-black/10 p-2 lg:p-5 bg-[#EDEAE3]">
+    <section className="w-full bg-[#EDEAE3] pt-0 md:pt-5 lg:p-5">
       <div className="max-w-[1200px]   mx-auto">
         <div className="w-full  md:min-h-[630px]  border border-black/20 border-t-black/20 rounded-[8px] lg:rounded-[10px] overflow-hidden">
           <div className="flex flex-col lg:flex-row bg-[#EDEAE3] gap-2 md:gap-0 h-full cursor-pointer">
