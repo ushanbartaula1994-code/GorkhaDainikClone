@@ -56,7 +56,6 @@ function VideoReelsPreview({ category }: Props) {
                 whileHover={{ scale: 1.02 }}
                 className="relative w-full aspect-[3/4] rounded-[8px] overflow-hidden group cursor-pointer"
               >
-              
                 <Image
                   src={item.image || "/gorkhasamachar/preview.png"}
                   alt={item.titleEN}
@@ -64,34 +63,34 @@ function VideoReelsPreview({ category }: Props) {
                   className="object-cover group-hover:scale-105 transition-transform duration-300"
                 />
 
-        
                 <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent" />
 
-               
                 {item.duration && (
                   <span className="absolute top-3 right-3 bg-black/80 font-extrabold text-white font-mono text-[14px] px-2.5 py-1.5 rounded">
                     {item.duration}
                   </span>
                 )}
 
-                
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="w-16 h-10 md:w-12 md:h-12 rounded-full bg-[white] flex items-center justify-center">
-                    <Play size={16} fill="gray" stroke="none" className="ml-0.5" />
+                  <div className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-[white] flex items-center justify-center z-20">
+                    <Play
+                      size={14}
+                      fill="gray"
+                      stroke="none"
+                      className="ml-0.5"
+                    />
                   </div>
                 </div>
 
                 <div className="absolute bottom-0 left-0 right-0 flex flex-col gap-2 md:gap-3 px-[10px] pb-[14px]">
-                  
-                  <span className="self-start bg-[#C01C28] text-white  text-[11px] font-semibold px-3 py-1.5 rounded">
-                       {item.category}  
+                  <span className="self-start bg-[#C01C28] text-white text-[10px] sm:text-[11px] font-semibold px-3 py-1.5 rounded">
+                    {item.category}
                   </span>
-                  <p className="font-nep font-semibold text-[16px] md:text-[17px] leading-[21px] md:leading-[22px] text-white line-clamp-2">
+                  <p className="font-nep font-semibold text-[13px] sm:text-[15px] md:text-[16px] leading-[21px] md:leading-[22px] text-white line-clamp-2">
                     {lang === "EN" ? item.titleEN : item.titleNE}
                   </p>
 
-                 
-                  <p className="font-nep font-normal text-[16px] leading-[18px] text-white/70">
+                  <p className="font-nep font-normal text-[11px] sm:text-[12px] leading-[18px] text-white/70">
                     {lang === "EN" ? item.createdAtEN : item.createdAtNE}
                   </p>
                 </div>
